@@ -1,4 +1,6 @@
 ---
+const message = Astro.cookies.get("message")?.value
+Astro.cookies.set("pesanku", "ini pesan dari bawah") 
 
 ---
 
@@ -12,5 +14,6 @@
 	</head>
 	<body>
 		<h1>Astro</h1>
+		<p>{message}</p>
 	</body>
 </html>
