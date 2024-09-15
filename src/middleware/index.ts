@@ -1,4 +1,6 @@
-const middleware = (context, next) => {
+import type { APIContext, MiddlewareNext } from "astro";
+
+const middleware = (context: APIContext, next: MiddlewareNext) => {
 	context.cookies.set('message', "ini pesan dari atas");
 	console.log(context.cookies.get("pesanku")?.value);
 	
